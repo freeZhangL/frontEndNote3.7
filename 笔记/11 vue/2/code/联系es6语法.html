@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+    var myArray = [
+        {id: 1, name: "a"},
+        {id: 2, name: "b"},
+        {id: 3, name: "c"},
+        {id: 4, name: "d"},
+    ]
+    myArray.forEach((item, index) => {
+        console.log(item.id);
+        //1,2,3,4,5
+    })
+
+    var myArray = [
+        {id: 1, name: 'a'}, {id: 2, name: 'b'}, {id: 4, name: 'c'}, {id: 3, name: 'd'},
+
+    ]
+    myArray.forEach((item,index)=>{
+        // console.log(item+'====='+ index)
+        console.log(item.name)
+        console.log(item.id);
+    })
+    console.log(/^[\u4e00-\u9fa5a-zA-Z]{1,}$/.test('范德萨safda范德萨s'))
+
+
+
+    $("#chnName").blur(function(){
+        var username = /^[\u4E00-\u9FA5A-Za-z]+$/;
+        console.log($("#chnName").val())
+        if(!username.test($("#chnName").val())){
+            $("#chnNameMsg").text("只能输入中文和英文");
+        }else{
+            $("#chnNameMsg").text("");
+        }
+    });
+</script>
+</body>
+</html>
